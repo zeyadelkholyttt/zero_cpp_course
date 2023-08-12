@@ -98,7 +98,7 @@ int tsk_asciiconverter(){
 	return 0;
 }
 int typedata_modifiers(){
-	//sighned int accept both +,- sighn
+	//sighned int accept both +,- sign
 	signed int negative = -1;
 	cout << negative << endl;
 	// this code make a problem
@@ -112,7 +112,7 @@ int typedata_modifiers(){
 	typedef long long int bignum;
 	bignum broo = 2;
 	cout << broo << endl;
-	//modifaing the data 
+	//modifying the data 
 	// u can change the size of int to make it bigger or make it smaller by using long and short
 	short shrt = 1;
 	cout << sizeof(shrt) << endl;
@@ -142,12 +142,12 @@ int ops(){
 	//modulo ====> reminder after division (%)
 	cout << 10 % 5 << endl;
 	cout << 11 % 5 << endl;
-	// cout << 10.5 % 5 << endl; the num must be intager to make the modulo
+	// cout << 10.5 % 5 << endl; the num must be integer to make the modulo
 }
 int assignment(){
-/* using varialbe (operation)= num; 
+/* using variable (operation)= num; 
 this make you make operation with the variable on the first num on the operation
-this replace varialbe = variable (op) num*/
+this replace variable = variable (op) num*/
 // first way
 	int a = 10;
 	a = a *10;
@@ -157,8 +157,78 @@ this replace varialbe = variable (op) num*/
 	a *= 10;
 	cout << a << endl;
 }
+int in_de_crement(){
+	// pre = do and then increment
+	int num = 0;
+	cout << num++ << endl;// 0 - nothing changed
+	cout << num << endl;// the value increased by 1
+	cout << "============" << endl;
+	//post = add and then do the command
+	int another_num = 0;
+	cout << ++another_num << endl;// 1 , adding and then out
+	// decrement
+	cout << "==========" << endl;
+	//use the post and pre as same as in increment
+	int an_other_num = 0;
+	cout << an_other_num++ << endl;
+	cout << an_other_num << endl;
+	cout << --an_other_num << endl;
+
+
+}
+int comparison_operators(){
+
+	// this operators use for compare between to values
+	/*  == equal
+	    != not equal
+		>  Greater than
+		<  less than
+		>= Greater than or equal
+		<= less than or equal
+		*/
+	cout << (100 == 10) << endl;// 0 = False
+	cout << (100 < 100) << endl;// 0 = False
+	cout << (100 >= 100) << endl;// 1 = True
+}
+int logic_operators(){
+	//this logic ops / or as i call it logic gates
+	/*
+	&& and
+	|| or
+	! not
+
+	*/
+	cout << (100 == 5 && 10 == 10) << endl;// 0 = false
+		
+	cout << (100 == 5 || 10 == 10) << endl;// 1 = true
+
+	cout << !(100 == 5 || 10 == 10) << endl;// 0 = false
+}
+int operator_precedence(){
+	// this a absolute math concept 
+	/*
+	to calculate you must do this in order 
+	1- plus and minus
+	2- multiply and divide
+	=*= from lift to write if you have two have same precedence
+	*/
+}
+int control_flow_IF(){
+	/*if condition is a way to control the flow of data 
+	we can use the all the operators which we learned it at past
+	 */
+	int age = 17;
+	
+
+	if (age > 18) {
+		cout << "you aren't a kid" << endl;
+
+	}else {
+		cout << "go out you are a kid" << endl;
+	}
+}
 int main()
 {
-	assignment();	
+	control_flow_IF();	
 	return 0;
 }
