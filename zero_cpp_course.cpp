@@ -227,8 +227,43 @@ int control_flow_IF(){
 		cout << "go out you are a kid" << endl;
 	}
 }
+int ternary_IF(){
+	// using if condition in one line
+	/*
+	syntax :
+	(condition 	?do if it true :do if it false)
+	*/
+	int num;
+	cout << "just write any num" << endl;
+	cin >> num;
+
+	string msg = (num == 20 ? "join bro" : "go out of here");
+	cout << msg << endl;
+}
+int nested_ternary_IF(){
+	// this explain how to make a nested ternary if statement
+	/*
+	condition ? do if true : (another condition)
+	*/
+	int another_num_again;
+	cout << "again write a num" << endl;
+	cin >> another_num_again;
+	cout << (another_num_again >= 10 ? (10 == another_num_again ? "that's good " : "i didn't have any ideas to massage but the code must be ok") : "go to ur mum" ) << endl ;
+}
+void odd_even_checker(){
+
+	// this is a application done in the ep 35 in the course 
+	/*
+	i will done it independently before i watch the course 
+	*/
+	int the_num;
+	cout << "enter a num to check " << endl;
+	cin >> the_num;
+	double the_modules = the_num % 2;
+	cout << (the_modules != 1 ? "this is a even num" : "this is a odd num") << endl;
+}
 int main()
 {
-	control_flow_IF();	
+	odd_even_checker();	
 	return 0;
 }
