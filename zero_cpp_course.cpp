@@ -262,8 +262,55 @@ void odd_even_checker(){
 	double the_modules = the_num % 2;
 	cout << (the_modules != 1 ? "this is a even num" : "this is a odd num") << endl;
 }
+void find_greater(){
+
+	// this app get 3 variables (nums) and printing the biggest one of them
+	int a, b, c;
+	cin >> a >> b >> c;
+	if (a > b && a > c ) {
+		cout << "the " << a << " is the biggest num" << endl;
+	}else if (b > a && b > c)
+	{
+		cout << "the " << b << " is the biggest " << endl;
+
+	}else if (c > a && c > b)
+	{
+		cout << "the " << c << " is the biggest" << endl;
+	}else {
+		cout << "plz enter a correct num" << endl;
+	}
+}
+void calculator(){
+
+		// this is a simple calculator 
+		int num_one, num_two, op;
+
+		cout << "enter the nums" << endl;	
+		cin >> num_one >> num_two;
+		cout << "enter the num of op\n 1_addition\n 2_subtraction \n 3_multiplication\n 4_dividing " << endl;
+		cin >> op;
+		if (op == 1) {
+			cout << num_one + num_two<< endl;
+		}else if (op == 2)
+		{
+			cout << num_one - num_two << endl;
+		}else if (op == 3){
+			
+			cout << num_one * num_two << endl;
+
+		}else if (op == 4){
+
+			
+			cout << num_one / num_two << endl;
+		}else{
+			cout << "go to your mum don't play here" << endl;
+		}		
+}
+	
+	
+
 int main()
 {
-	odd_even_checker();	
+	calculator();	
 	return 0;
 }
