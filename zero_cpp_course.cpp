@@ -306,11 +306,78 @@ void calculator(){
 			cout << "go to your mum don't play here" << endl;
 		}		
 }
+void _switch(){
+	// this code explain the switch in cpp
+	int days;
+	cout << "enter the day" << endl;
+	cin >> days;
+	switch (days)
+	{
+	case 1:
+		cout << "day 1 " << endl;
+		break;
+	case 2:
 	
-	
+		cout << "day 2 " << endl;
+		// without break print default before the case 2
+	default:
+		cout << "enter a number " << endl;
+		break;
+	}
+	// to use switch the variable must be integer or character
+	// switch are another way to make if condition
+}
+void switch_calculator (){
+	// the course in ep 37 there are 3 apps to practice i just done one of theme if you need the 3 apps to do with your self just go to course
+	int num_one, num_two, op;
+	cout << "enter the nums" << endl;	
+	cin >> num_one >> num_two;
+	cout << "enter the num of op\n 1_addition\n 2_subtraction \n 3_multiplication\n 4_dividing " << endl;
+	cin >> op;
+	switch (op){
 
+	case 1 :
+		cout << num_one + num_two << endl;	
+		break;
+	case 2 :
+
+		cout << num_one - num_two << endl;	
+		break;
+	case 3 :
+	
+		cout << num_one * num_two << endl;	
+		break;
+	case 4 :
+	
+		cout << num_one / num_two << endl;
+		break;	
+	}	
+}	
+void arrays() {
+	//this class explain arrays
+	/*
+	array is a collection of elements of the same type
+	place in the contiguous memory locations
+	the syntax:
+	* data type (name of array) [the num of items] = {i, t, e, ms};
+	- we can do a array without num of arrays in the [] and compiler will add them by automaticaly
+	- also we can remove the =
+	* you can access the array item by using array name[index num (starts from 0)]
+	* to get the memory location add & before the array
+	* you can make array empty and update it later by :
+	== array name [index] = the update value
+	*/
+
+	int nums[4] = {1, 2, 3, 4};
+	cout << sizeof(int) << endl; //4 Bytes
+	cout << sizeof(nums) << endl;//16 Bytes
+	cout << nums[0] << endl;
+	cout << "Location : " << &nums[2] << endl;
+	nums[3] = 3;
+	cout << nums[3] << endl;
+}
 int main()
 {
-	calculator();	
+	arrays();	
 	return 0;
 }
