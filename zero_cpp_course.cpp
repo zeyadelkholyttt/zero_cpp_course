@@ -1,6 +1,7 @@
 // Using online ide of C++
 #include <iomanip>
 #include <iostream>
+#include <array>
 using namespace std;
 int Escape_sec(){
 	//this code explain escape sequences
@@ -376,8 +377,28 @@ void arrays() {
 	nums[3] = 3;
 	cout << nums[3] << endl;
 }
+void twod_arrays(){
+	// this code explain the 3d arrays 
+	// to access the array with to dimensional you need to add another [] to get the columns and rows
+	// just look to syntax 
+	int two_d_array[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+	cout << two_d_array[0][1] << endl;
+	// the values of array must be constant (value or const)
+}
+void _template(){
+	// this is a template like array method this used to replace the c style array(last class) because c style have a lot of bugs and problems
+	/*
+	syntax:
+	template<type, size > identifier 
+	*/ 
+	array<int, 4> points = {1, 2, 3, 4};
+	cout << points[0] << endl;
+	cout << points.size() << endl;
+	points.fill(8);
+	cout << points[0] << endl;
+}
 int main()
 {
-	arrays();	
+	_template();	
 	return 0;
 }
