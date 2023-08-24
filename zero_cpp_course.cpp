@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <iostream>
 #include <array>
+#include <string.h>
 using namespace std;
 int Escape_sec(){
 	//this code explain escape sequences
@@ -397,8 +398,56 @@ void _template(){
 	points.fill(8);
 	cout << points[0] << endl;
 }
+void array_training(){
+	// this is a training for arrays
+	int ans[1];
+	int points =0; 
+	int nums[3][3] = {
+		{1, 2, 4},
+		{2, 4, 16},
+		{4, 4, 8}
+	};
+	cout << "the first sequence :" << nums[0][0] << " | " << nums[0][1] << " | ?" << endl;
+	cin >>  ans[0];
+	if (ans[0] == nums[0][2]){
+		++points;
+
+	}
+
+	cout << "the second sequence :" << nums[1][0] << " | " << nums[1][1] << " | ?" << endl;
+	cin >>  ans[0];
+	if (ans[0] == nums[1][2]){
+		++points;
+
+	}
+
+
+	cout << "the third sequence :" << nums[2][0] << " | " << nums[2][1] << " | ?" << endl;
+	cin >>  ans[0];
+	if (ans[0] == nums[2][2]){
+		++points;
+
+	}
+
+
+	cout << "your points is : " << points << "/3"<< endl;
+}
+void concatenating(){
+	// explaining the concatenation of strings in cpp
+	char first_word[] = "Zeyad ";
+	char second_word[] = "Elkholy";
+	cout << first_word << second_word << endl;
+	cout << strcat(first_word, second_word) << endl;
+	string firstname = "zeyad ";
+	string second = "elkholy";
+	cout << firstname + second<< endl;
+	cout << firstname.append(second) << endl;
+
+
+
+} 
 int main()
 {
-	_template();	
+	concatenating();	
 	return 0;
 }
