@@ -445,9 +445,25 @@ void concatenating(){
 
 
 
+}
+void forloops(){
+
+	// this code explain for loops 
+	/*
+	syntax :
+	for (init; condition; update){
+
+		the code
+	}	
+	*/
+	for (int i = 0; i < 500; i++){
+		cout << i << endl;
+
+
+	}
 } 
 int main()
 {
-	concatenating();	
+	forloops();	
 	return 0;
 }
