@@ -429,7 +429,6 @@ void array_training(){
 
 	}
 
-
 	cout << "your points is : " << points << "/3"<< endl;
 }
 void concatenating(){
@@ -461,9 +460,102 @@ void forloops(){
 
 
 	}
+	
+}
+void advanced_for(){
+
+	// you can write the for loop in other syntax or you can modify the syntax
+	// you can get rid of condition and initializer but you need to but the semicolons and but them in another place
+	int nums[]= {1, 2, 3, 4, 5, 6};
+	int NumsCount = sizeof(nums)/sizeof(nums[0]);
+	int i = 2;
+	for (;;){
+
+		cout <<	nums[i] << endl;
+		i++;
+		if (i == NumsCount)
+		{
+			break;
+		}
+
+	}
 } 
+void ForTraining(){
+
+	// this a training in for loops you can find the solution on the ep 49 but i will ans this
+	int nums[]= {100, 200, 300, 400, 500, 600};
+	int NumsCounter = sizeof(nums)/sizeof(nums[0]);
+	// for (int i=0; i < NumsCounter; i++ ){
+	// 	cout << nums[i] << endl;
+
+	// 	i++;
+	// }
+
+	// for (int i=0; i < NumsCounter;i += 2){
+	// 	cout << nums[i] << endl;
+
+	// }
+
+	for (int i=NumsCounter-1; i > 1;){
+		cout << nums[i] << endl;
+		i--;
+	}
+}
+void NestedLoop(){
+
+	// loop in another loop
+	string products[]{"Item1", "Item2", "Item3", "Item 3amer"};
+	string sizes[] = {"small", "large", "x-large"};
+	for (int i=0; i < 4;i++ ){
+		cout << products[i] << endl;
+		for (int z=0; z <3 ; z++){
+			cout << sizes[z] << endl;
+		}
+	}
+}
+void While(){
+
+	// this code explain the loop with while 
+	/*
+	syntax:
+	while (condition){
+
+
+	}
+	you can but break in any where in the while function or not (will cause infinite loop)	
+	*/
+	int i =0;
+	while (i < 5){
+		cout << i << endl;
+		if (i == 3)
+		{
+			break;
+		}
+		i++;
+	}
+}
+void DoWhile(){
+	// do the code > check the condition > terminate or repeat
+	/*
+	syntax :
+	do
+	{
+		(/block of code/)
+	}(condition)
+	*/
+	int num=0;
+	while (num <6){
+		cout << num << endl;
+		num++;
+	};// stop before 6
+	cout << "================\n"; 
+	do 
+	{
+		cout << num << endl;
+	}while(num < 6);//stop in 6
+}
 int main()
 {
-	forloops();	
+	DoWhile();	
 	return 0;
 }
