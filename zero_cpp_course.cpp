@@ -554,8 +554,37 @@ void DoWhile(){
 		cout << num << endl;
 	}while(num < 6);//stop in 6
 }
+void Continue(){
+
+	// continue = skip the code after that in this condition 
+	int nums[]= {1, 2, 3, 4, 5, 6};
+	for (int i =0; i < 6; i++){
+		cout << "the num is : " << endl;
+		if (nums[i] == 4){
+			continue;
+		}
+		cout << nums[i] << endl;
+	}
+
+}
+void LoopsTraining(){
+	//some application for loops
+	int nums[]= {1, 5, -3, 4, 7, -8};
+	int start= 0;
+	for (int i; i < 6; i++){
+		int evorod= nums[i] %2 ;
+		if (evorod == 0 || nums[i] > 0){
+			
+		}
+	}
+
+	int end = start + nums[i];
+	cout << end << endl;
+
+
+}
 int main()
 {
-	DoWhile();	
+	LoopsTraining();	
 	return 0;
 }
