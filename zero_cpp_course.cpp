@@ -571,20 +571,54 @@ void LoopsTraining(){
 	//some application for loops
 	int nums[]= {1, 5, -3, 4, 7, -8};
 	int start= 0;
-	for (int i; i < 6; i++){
-		int evorod= nums[i] %2 ;
-		if (evorod == 0 || nums[i] > 0){
-			
+	for (int i =0; i < 6; i++){
+		if (nums[i]% 2 == 0 && nums[i] > 0){
+			start += nums[i];
 		}
 	}
 
-	int end = start + nums[i];
-	cout << end << endl;
+	cout << start << endl;
+	int guessing_num = 8;
 
+	cout << "give me the number faster" << endl;
+	int num;
+	cin >> num;
+	if (num != guessing_num){
+		for ( int i = 0; i < 3; i++)
+		{
+			cout << "give me the number faster" << endl;
+			cin >> num;
 
+		}
+	}
+	if (num == guessing_num){
+	cout << "good joke" << endl;	
+	}
+	cout << "go to your mother" << endl;
+}
+void LoopsTraining2(){
+	int elements[5];
+	int inp;
+	for (int i=0;i < 5; i++){
+		cout << "give me the number without plz" << endl;
+		cin >> inp;
+		elements[i] = inp;
+	}
+	for (int z=4; z > -1; z--){
+		cout << elements[z] <<endl;
+	}
+}
+void Function(string msg, string name){
+	cout << msg << " " << name << endl;
+
+}
+void Training_of_functions(){
+
+	
 }
 int main()
 {
-	LoopsTraining();	
+	Function("hi", "zod");
+	Function("hi", "mother Further");
 	return 0;
 }
