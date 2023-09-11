@@ -3,6 +3,7 @@
 #include <iostream>
 #include <array>
 #include <string.h>
+#include <cmath>
 using namespace std;
 int Escape_sec(){
 	//this code explain escape sequences
@@ -608,17 +609,69 @@ void LoopsTraining2(){
 		cout << elements[z] <<endl;
 	}
 }
-void Function(string msg, string name){
+void Function(string msg = "how are ur mother", string name= ",nigga"){
 	cout << msg << " " << name << endl;
 
-}
-void Training_of_functions(){
 
-	
 }
-int main()
-{
+int FuncReturn(int num1, int num2){
+	// this void function doesn't have return value and will have error if you try to do this
+	// 
+	cout << num1 + num2 << endl;
+	return num1 + num2 ;
+	cout << "this text doesn't printing because the return break the function";
+}
+// this is a forward declaration 
+int Forward_Declaration (int anothernum, int othernum);
+void Training_of_functions(){
+	// this is a functions with default paramater 
 	Function("hi", "zod");
 	Function("hi", "mother Further");
+	Function("hi how are u");
+	Function();
+	// this is a function with return value 
+	FuncReturn(1, 5);
+	int result = FuncReturn(1, 4);	
+	cout << result * 5 << endl;
+	// this is a forward declared function
+	// this function doesn't created until now
+	int another_result =Forward_Declaration(5, 7);
+	cout << another_result << endl;
+	
+}
+int Forward_Declaration (int anothernum, int othernum){
+	return anothernum + othernum;
+}
+void cmath(){
+	// this a function explain cmath lib functions
+	// [1] this function is a power function made the power operation 
+	// first num is a base and the another is the power
+	cout << pow(5, 2) << endl;
+	cout << 5 * 5 << endl;
+	// cout << 5.1 % 2 << endl; give a error
+	// this function made a modules for fractions
+	cout << fmod(5.1, 2) << endl;
+	// this approximate the number to the nearest next integer number
+	cout << ceil(9.1) << endl;
+	// this approximate the number to the nearest last integer number
+	cout << floor(9.9) << endl;
+	// this approximate the number to the nearest last or next integer number depend on the fraction 
+	cout << round(9.5) << endl;
+	cout << round(9.4) << endl;
+	// this function cut the fraction from the the number
+	cout << trunc(9.9) << endl;
+	cout << trunc(9.5) << endl;
+	cout << trunc(9.1) << endl;
+
+
+}
+
+
+	 
+	
+
+int main()
+{
+	cmath();
 	return 0;
 }
